@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection avec Compteur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #countdown {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .flag-button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .flag-button:hover {
+            transform: scale(1.1);
+        }
+        .flag-button.fr {
+            background-color: #0055a5;
+        }
+        .flag-button.eng {
+            background-color: #bc002d;
+        }
+        .flag-button img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Redirection dans <span id="countdown">5</span> secondes...</h1>
+        <div class="buttons">
+            <button class="flag-button fr" onclick="changeLanguage('fr')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/100px-Flag_of_France.svg.png" alt="FR">
+            </button>
+            <button class="flag-button eng" onclick="changeLanguage('eng')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/100px-Flag_of_the_United_Kingdom.svg.png" alt="ENG">
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let countdownTimer;
+        let countdownValue = 5;
+
+        function startCountdown() {
+            countdownTimer = setInterval(() => {
+                countdownValue--;
+                if (countdownValue >= 0) {
+                    document.getElementById('countdown').textContent = countdownValue;
+                } else {
+                    clearInterval(countdownTimer);
+                    redirectToLink();
+                }
+            }, 1000);
+        }
+
+        function stopCountdown() {
+            clearInterval(countdownTimer);
+        }
+
+        function redirectToLink() {
+            // Modifier le lien de redirection ici
+            window.location.href = 'http://exemple.com';
+        }
+
+        function changeLanguage(lang) {
+            if (lang === 'fr') {
+                // Modifier le lien de redirection FR ici
+                window.location.href = 'http://exemple.com/fr';
+            } else if (lang === 'eng') {
+                // Modifier le lien de redirection ENG ici
+                window.location.href = 'http://exemple.com/eng';
+            }
+        }
+
+        // Démarrer le compte à rebours au chargement de la page
+        document.addEventListener('DOMContentLoaded', () => {
+            startCountdown();
+        });
+    </script>
+</body>
+</html>
