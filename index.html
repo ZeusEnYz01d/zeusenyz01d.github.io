@@ -3,117 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirection avec Compteur</title>
+    <title>Page de Téléchargement des Logiciels de Jeux</title>
+    <!-- Styles -->
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            max-width: 400px;
+            line-height: 1.6;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            font-size: 24px;
+        .lang-select {
             margin-bottom: 20px;
         }
-        #countdown {
-            font-size: 48px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
+        .lang-select img {
+            width: 30px;
+            cursor: pointer;
+            margin-right: 10px;
         }
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+        .content {
             margin-top: 20px;
         }
-        .flag-button {
-            width: 50px;
-            height: 50px;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-        .flag-button:hover {
-            transform: scale(1.1);
-        }
-        .flag-button.fr {
-            background-color: #0055a5;
-        }
-        .flag-button.eng {
-            background-color: #bc002d;
-        }
-        .flag-button img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
+        .countdown {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Redirection dans <span id="countdown">5</span> secondes...</h1>
-        <div class="buttons">
-            <button class="flag-button fr" onclick="changeLanguage('fr')">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/100px-Flag_of_France.svg.png" alt="FR">
-            </button>
-            <button class="flag-button eng" onclick="changeLanguage('eng')">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/100px-Flag_of_the_United_Kingdom.svg.png" alt="ENG">
-            </button>
-        </div>
+    <!-- Choix de langue -->
+    <div class="lang-select">
+        <span>Choisissez votre langue:</span>
+        <a href="#" onclick="switchLanguage('fr')"><img src="https://emojicombos.com/wp-content/uploads/2020/04/franceflag.png" alt="FR"></a>
+        <a href="#" onclick="switchLanguage('en')"><img src="https://emojicombos.com/wp-content/uploads/2020/04/usaflag.png" alt="EN"></a>
     </div>
 
-    <script>
-        let countdownTimer;
-        let countdownValue = 5;
+    <!-- Contenu principal -->
+    <div class="content" id="content-fr">
+        <!-- Section Call of Duty: Black Ops IV -->
+        <h2>Call of Duty: Black Ops IV</h2>
+        <h3>Host</h3>
+        <ul>
+            <li>🌟 <strong>GSC LOADER BO4</strong>: <a href="#" onclick="countdownRedirect('http://joueursdecodfr.mygamesonline.org/leak/Gsc%20.Loader%20BO4.rar')">Clique ici</a></li>
+        </ul>
+        <!-- Ajouter d'autres sections similaires pour les autres jeux et catégories -->
 
-        function startCountdown() {
-            countdownTimer = setInterval(() => {
-                countdownValue--;
-                if (countdownValue >= 0) {
-                    document.getElementById('countdown').textContent = countdownValue;
-                } else {
-                    clearInterval(countdownTimer);
-                    redirectToLink();
+        <!-- Liste des tutoriels -->
+        <h3>Liste des Tutoriels</h3>
+        <h4>Inject Tuto</h4>
+        <ul>
+            <li><strong>Black Ops I</strong> - Host | MP: <a href="https://www.youtube.com/watch?v=4lusHG_ZSKo&t=2s">Tuto link</a></li>
+            <!-- Ajouter d'autres tutoriels -->
+        </ul>
+    </div>
+
+    <div class="content" id="content-en" style="display:none;">
+        <!-- English content will be similar to the French content above -->
+        <!-- Adjust as per your needs -->
+    </div>
+
+    <!-- Script pour le compte à rebours -->
+    <script>
+        function countdownRedirect(url) {
+            var countdown = 10;
+            var countdownElement = document.createElement('div');
+            countdownElement.classList.add('countdown');
+            document.body.appendChild(countdownElement);
+
+            var countdownInterval = setInterval(function() {
+                countdown--;
+                countdownElement.textContent = 'Redirection dans ' + countdown + ' secondes...';
+
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = url;
                 }
             }, 1000);
         }
 
-        function stopCountdown() {
-            clearInterval(countdownTimer);
-        }
-
-        function redirectToLink() {
-            // Modifier le lien de redirection ici
-            window.location.href = 'http://exemple.com';
-        }
-
-        function changeLanguage(lang) {
+        function switchLanguage(lang) {
             if (lang === 'fr') {
-                // Modifier le lien de redirection FR ici
-                window.location.href = 'http://exemple.com/fr';
-            } else if (lang === 'eng') {
-                // Modifier le lien de redirection ENG ici
-                window.location.href = 'http://exemple.com/eng';
+                document.getElementById('content-fr').style.display = 'block';
+                document.getElementById('content-en').style.display = 'none';
+            } else if (lang === 'en') {
+                document.getElementById('content-en').style.display = 'block';
+                document.getElementById('content-fr').style.display = 'none';
             }
         }
-
-        // Démarrer le compte à rebours au chargement de la page
-        document.addEventListener('DOMContentLoaded', () => {
-            startCountdown();
-        });
     </script>
 </body>
 </html>
