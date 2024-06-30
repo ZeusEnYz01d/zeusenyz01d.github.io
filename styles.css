@@ -1,0 +1,191 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    color: #e50914;
+    margin-bottom: 30px;
+}
+
+/* Main section styles */
+main section {
+    margin-bottom: 20px;
+}
+
+main h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 5px;
+}
+
+.software-group h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #e50914;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:nth-child(1) {
+    background-color: #e50914; /* Red */
+}
+
+button:nth-child(2) {
+    background-color: #ff8000; /* Orange */
+}
+
+button:nth-child(3) {
+    background-color: #ffcc00; /* Yellow */
+}
+
+button:nth-child(4) {
+    background-color: #33cc33; /* Green */
+}
+
+button:nth-child(5) {
+    background-color: #0099ff; /* Blue */
+}
+
+button:nth-child(6) {
+    background-color: #6600cc; /* Purple */
+}
+
+button:nth-child(7) {
+    background-color: #ff0066; /* Pink */
+}
+
+button:nth-child(8) {
+    background-color: #ff3399; /* Light pink for BO2 */
+}
+
+button:nth-child(9) {
+    background-color: #b300b3; /* Purple for BO2 */
+}
+
+button:nth-child(10) {
+    background-color: #33cccc; /* Light blue for BO2 */
+}
+
+button:nth-child(11) {
+    background-color: #b3b300; /* Yellow for WaW */
+}
+
+button:nth-child(12) {
+    background-color: #cc6699; /* Pink for WaW */
+}
+
+button:nth-child(13) {
+    background-color: #0099ff; /* Blue for WaW */
+}
+
+button:nth-child(14) {
+    background-color: #ff6666; /* Light red for Mw3 */
+}
+
+button:nth-child(15) {
+    background-color: #4d4dff; /* Dark blue for Mw3 */
+}
+
+button:nth-child(16) {
+    background-color: #66ff66; /* Light green for Mw3 */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#confirmButton {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.closeButton {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#confirmButton:hover,
+.closeButton:hover {
+    opacity: 0.8;
+}

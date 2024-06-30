@@ -1,94 +1,133 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Téléchargement des Logiciels de Jeux</title>
-    <!-- Styles -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        .lang-select {
-            margin-bottom: 20px;
-        }
-        .lang-select img {
-            width: 30px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .content {
-            margin-top: 20px;
-        }
-        .countdown {
-            font-size: 24px;
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Téléchargement de logiciels</title>
+<link rel="stylesheet" href="styles.css">
+<!-- Liens vers les styles Bootstrap -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Choix de langue -->
-    <div class="lang-select">
-        <span>Choisissez votre langue:</span>
-        <a href="#" onclick="switchLanguage('fr')"><img src="https://emojicombos.com/wp-content/uploads/2020/04/franceflag.png" alt="FR"></a>
-        <a href="#" onclick="switchLanguage('en')"><img src="https://emojicombos.com/wp-content/uploads/2020/04/usaflag.png" alt="EN"></a>
+    <!-- Div pour l'iframe YouTube en arrière-plan -->
+<div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+    <iframe
+      frameborder="0"
+      height="100%"
+      width="100%"
+      src="https://www.youtube.com/embed/05FuEFMdmeg?autoplay=1&controls=0&showinfo=0&autohide=1"
+    >
+    </iframe>
+  </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">UNLOCK MOD MENU</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://dsc.gg/cod-fr">Discord</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="hello.html">Tuto Inject ? </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://cod-fr.mygamesonline.org/jeux/index.html">DownLoad Call Of</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <main>
+        <section style="background-color: #1c1c1c; padding: 15px; border-radius: 5px;">
+            <h2>BO4</h2>
+            <div class="software-group">
+                <h3>Host</h3>
+                <button onclick="confirmDownload('GSC LOADER BO4', 'http://joueursdecodfr.mygamesonline.org/leak/Gsc%20.Loader%20BO4.rar')">🌟 GSC LOADER BO4</button>
+            </div>
+            <div class="software-group">
+                <h3>No-Host</h3>
+                <button onclick="confirmDownload('Unlock All + COLOR NAME', 'http://joueursdecodfr.mygamesonline.org/leak/Color+Unlock.dll')">🎓 Unlock All + COLOR NAME</button>
+                <button onclick="confirmDownload('Unlock All | TEMPS', 'https://mega.nz/file/UasjBQJZ#3MT20fpnCZh3D73zBIh6yIX2yNT6Bh3SydtkG62DZMY')">🌈 Unlock All | TEMPS</button>
+                <button onclick="confirmDownload('Mxt Plasma', 'https://www.mediafire.com/file/2wbkjexl6csztp7/MXT_BO4_1.0.1.dll/file')">💎 Mxt Plasma</button>
+            </div>
+        </section>
+
+        <section style="background-color: #2c2c2c; padding: 15px; border-radius: 5px;">
+            <h2>BO3</h2>
+            <div class="software-group">
+                <h3>Host</h3>
+                <button onclick="confirmDownload('GSC LOADER BO3', 'https://www.mediafire.com/file/cgy6n21tlyy7bfm/GSC+injector.zip/file')">🌠 GSC LOADER BO3</button>
+            </div>
+            <div class="software-group">
+                <h3>No-Host</h3>
+                <button onclick="confirmDownload('VxnOiP', 'https://mega.nz/file/oaUmDRLb#lLC9fxgjiFBL09wjCOBr7B13OaoKrwLXXo3GzEr5UuU')">☢ VxnOiP</button>
+                <button onclick="confirmDownload('Mxt', 'https://www.mediafire.com/file/zq2w719xpfjpk05/MXT+1.1.2.zip/file')">🧩 Mxt</button>
+                <button onclick="confirmDownload('Scropts', 'https://mega.nz/file/oaUmDRLb#lLC9fxgjiFBL09wjCOBr7B13om/iUVPmvRx')">🦄 GodNess</button>
+                <button onclick="confirmDownload('GodNess', 'https://pastebin.com/iUVPmvRx')">🦄 GodNess</button>
+                <button onclick="confirmDownload('Phantom', 'https://mega.nz/file/tWVkhRia#JehoVcYGJkFXhKOSiu0pSQTLBUaB3wIHuWPIwbzhP7I')">👻 Phantom</button>
+                <button onclick="confirmDownload('AlwaysLose', 'https://discord.gg/cod-fr')">🌡️ AlwaysLose</button>
+            </div>
+        </section>
+
+        <section style="background-color: #3c3c3c; padding: 15px; border-radius: 5px;">
+            <h2>BO2</h2>
+            <div class="software-group">
+                <h3>No-Host</h3>
+                <button onclick="confirmDownload('Get-Ip_Serveur', 'http://joueursdecodfr.mygamesonline.org/leak/PLUTONIUM%20SERVER%20GET%20IP%20(BY%20EFK)%20V2_[unknowncheats.me]_.zip')">🌐 Get-Ip_Serveur</button>
+            </div>
+            <div class="software-group">
+                <h3>Host</h3>
+                <button onclick="confirmDownload('VMT', 'https://www.mediafire.com/file/46f0gswvus88jpu/vmt_mod_menu-compiled.gsc/file')">🦇 VMT</button>
+                <button onclick="confirmDownload('Keabadian V1', 'https://www.mediafire.com/file/tuk22bp83ozkevw/Keabadian_v2.0.zip/file')">🦸 Keabadian V1</button>
+                <button onclick="confirmDownload('VengeanceV2', 'https://drive.proton.me/urls/YKPKX26Z0G#rPnuRnlAe6wj')">🧟 VengeanceV2</button>
+                <button onclick="confirmDownload('RMT', 'https://www.mediafire.com/file/ow37neconkyelr1/rmt_zombies_menu_v2.6_mod_menu-compiled.gsc/file')">🧠 RMT</button>
+            </div>
+        </section>
+
+        <section style="background-color: #4c4c4c; padding: 15px; border-radius: 5px;">
+            <h2>WaW</h2>
+            <div class="software-group">
+                <h3>Host</h3>
+                <button onclick="confirmDownload('Phen6mTrickshotting', 'https://www.mediafire.com/file/nxo4d0h11nzph1l/phen6m_World_at_War_v4_%2528PC%2529.rar/file')">🎃 Phen6mTrickshotting</button>
+                <button onclick="confirmDownload('FreshModded', 'https://www.mediafire.com/file/qpokcmor7ozmf0i/Fresh+Modders+-+T4+Mod+Menu.7z/file')">🏴‍☠️ FreshModded</button>
+                <button onclick="confirmDownload('The Hidden Gold V5.1', 'https://drive.google.com/file/d/1nHvUu-q_v77trTqBmix6vDVNyZx9oFGc/view?usp=drive_link')">🌹 The Hidden Gold V5.1</button>
+                <button onclick="confirmDownload('Discarded V3', 'https://www.mediafire.com/file/9nd4586xx0fhehv/Discarded+V3+-+T4+Mod+Menu.7z/file')">🧟‍♂️ Discarded V3</button>
+                <button onclick="confirmDownload('Elasticity V1', 'https://mega.nz/file/TZwHXKyY#2Lb6WYIjiBCDKvvUjRBVPPNIxXv35KJogWM3BzAuyS0')">🐱‍👤 Elasticity V1</button>
+            </div>
+        </section>
+
+        <section style="background-color: #5c5c5c; padding: 15px; border-radius: 5px;">
+            <h2>Mw3</h2>
+            <div class="software-group">
+                <h3>Host</h3>
+                <button onclick="confirmDownload('Apocalypse', 'https://www.mediafire.com/file/fecf58y7561pzpr/Apocalypse+MW3+Menu.rar/file')">⚔️ Apocalypse</button>
+            </div>
+        </section>
+
+    </main>
+
+<!-- Modal -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalMessage">Êtes-vous sûr de vouloir installer ce logiciel ?</p>
+        <div class="modal-buttons">
+            <button id="confirmButton">Oui</button>
+            <button class="closeButton">Non</button>
+        </div>
     </div>
+</div>
 
-    <!-- Contenu principal -->
-    <div class="content" id="content-fr">
-        <!-- Section Call of Duty: Black Ops IV -->
-        <h2>Call of Duty: Black Ops IV</h2>
-        <h3>Host</h3>
-        <ul>
-            <li>🌟 <strong>GSC LOADER BO4</strong>: <a href="#" onclick="countdownRedirect('http://joueursdecodfr.mygamesonline.org/leak/Gsc%20.Loader%20BO4.rar')">Clique ici</a></li>
-        </ul>
-        <!-- Ajouter d'autres sections similaires pour les autres jeux et catégories -->
+<!-- Scripts Bootstrap (jQuery nécessaire pour certaines fonctionnalités Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <!-- Liste des tutoriels -->
-        <h3>Liste des Tutoriels</h3>
-        <h4>Inject Tuto</h4>
-        <ul>
-            <li><strong>Black Ops I</strong> - Host | MP: <a href="https://www.youtube.com/watch?v=4lusHG_ZSKo&t=2s">Tuto link</a></li>
-            <!-- Ajouter d'autres tutoriels -->
-        </ul>
-    </div>
+<!-- Script personnalisé pour gérer la fenêtre modale -->
+<script src="script.js"></script>
 
-    <div class="content" id="content-en" style="display:none;">
-        <!-- English content will be similar to the French content above -->
-        <!-- Adjust as per your needs -->
-    </div>
-
-    <!-- Script pour le compte à rebours -->
-    <script>
-        function countdownRedirect(url) {
-            var countdown = 10;
-            var countdownElement = document.createElement('div');
-            countdownElement.classList.add('countdown');
-            document.body.appendChild(countdownElement);
-
-            var countdownInterval = setInterval(function() {
-                countdown--;
-                countdownElement.textContent = 'Redirection dans ' + countdown + ' secondes...';
-
-                if (countdown <= 0) {
-                    clearInterval(countdownInterval);
-                    window.location.href = url;
-                }
-            }, 1000);
-        }
-
-        function switchLanguage(lang) {
-            if (lang === 'fr') {
-                document.getElementById('content-fr').style.display = 'block';
-                document.getElementById('content-en').style.display = 'none';
-            } else if (lang === 'en') {
-                document.getElementById('content-en').style.display = 'block';
-                document.getElementById('content-fr').style.display = 'none';
-            }
-        }
-    </script>
 </body>
 </html>
